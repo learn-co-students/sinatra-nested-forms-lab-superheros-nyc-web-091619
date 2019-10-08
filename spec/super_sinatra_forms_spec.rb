@@ -19,7 +19,7 @@ describe App do
     it 'submits the form' do
       visit '/'
       fill_in("team[name]", :with => "Team Ruby")
-      fill_in("team[motto]", :with => "We love Ruby!")
+      fill_in("team[moto]", :with => "We love Ruby!")
       fill_in("member1_name", :with => "Amanda")
       fill_in("member1_power", :with => "Ruby")
       fill_in("member1_bio", :with => "I love Ruby!")
@@ -32,7 +32,7 @@ describe App do
       click_button 'submit'
 
       expect(page).to have_text("Team Ruby")
-      expect(page).to have_text("Team Motto: We love Ruby!")
+      expect(page).to have_text("Team Moto: We love Ruby!")
       expect(page).to have_text("Hero Name: Amanda")
       expect(page).to have_text("Hero Power: Ruby")
       expect(page).to have_text("Hero Biography: I love Ruby!")
