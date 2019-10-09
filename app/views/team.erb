@@ -1,3 +1,9 @@
+<h1>Team Name:</h1> <%= @team.name %>
+binding.pry
+<h2>Team Motto: <%= @team.motto %></h2> 
 
-
-
+<% @super_hero.each do |s|%>
+<p>Hero Name: <%= s.name %><p> <br>
+<p>Hero Power: <%= s.power %></p> <br>
+<p>Hero Biography: <%= s.bio %></p> <br>
+<% end%>
